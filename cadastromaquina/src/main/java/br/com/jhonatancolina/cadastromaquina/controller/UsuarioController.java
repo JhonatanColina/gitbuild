@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -78,5 +79,16 @@ public class UsuarioController
 	public void salvarUsuario(@RequestBody Usuario u)
 	{
 		usuarioService.salvar(u);
+	}
+	
+	/** 
+	 * Remove um usuario da base de dados.<br>
+	 * Ver mais em {@link UsuarioService#salvar(Usuario)}.
+	 * @param u Classe Usuario
+	 */
+	@DeleteMapping("/apagar/{id}")
+	public void apagarUsuario(@PathVariable(value = "id") String id)
+	{
+		usuarioService.apagar(id);
 	}
 }

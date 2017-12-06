@@ -30,6 +30,16 @@ public class UsuarioService
 	}
 	
 	/** 
+	 * Remove um usuario na base de dados.<br>
+	 * Ver mais em {@link #apagar(Usuario)}
+	 * @param id ID do usuario
+	 */
+	public void apagar(String id)
+	{
+		usuarioRepository.delete(id);
+	}
+	
+	/** 
 	 * Busca todas os usuarios persistidos na base de dados<br>
 	 * Ver mais em {@link #buscarTodosUsuarios()}.
 	 * @return Lista de Usuarios
