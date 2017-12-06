@@ -33,6 +33,17 @@ public class UsuarioController
       return usuarioService.buscarTodosUsuarios();
   }
   
+  /** 
+	 * Retorna a lista de usuarios por nome.<br>
+	 * Ver mais em {@link UsuarioService#buscarUsuariosPorNome()}.
+	 * @return Lista de Usuarios
+	 */
+  @GetMapping("/nomeUsuario/{nomeUsuario}")
+  List<Usuario> buscarUsuarioPeloNome(@PathVariable(value = "nomeUsuario") String nomeUsuario)
+  {
+      return usuarioService.buscarUsuariosPorNome(nomeUsuario);
+  }
+  
 	/** 
 	 * Retorna um usuario de acordo com o id.<br>
 	 * Ver mais em {@link UsuarioService#buscarPorId(String)}.

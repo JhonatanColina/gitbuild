@@ -40,6 +40,16 @@ public class UsuarioService
 	}
 	
 	/** 
+	 * Busca todas os usuarios persistidos na base de dados pelo nome<br>
+	 * Ver mais em {@link #buscarUsuariosPorNome()}.
+	 * @return Lista de Usuarios
+	 */
+	public List<Usuario> buscarUsuariosPorNome(String usuario)
+	{
+		return usuarioRepository.findByUsuarioContaining(usuario);
+	}
+	
+	/** 
 	 * Busca o usuario persistido na base de dados pelo id<br>
 	 * Ver mais em {@link #buscarPorId(String)}.
 	 * @return Classe usuario
