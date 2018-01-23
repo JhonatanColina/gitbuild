@@ -51,14 +51,14 @@ public class MaquinaService
   }
 	
 	/** 
-	 * Busca maquinas pelo Hostname<br>
+	 * Busca maquinas pelo Hostname com like<br>
 	 * Ver mais em {@link #buscarPorHostname(String)}. 
 	 * @return Maquina
 	 * @param hostname hostname da maquina
 	 */
 	public Maquina buscarPorHostname(String hostname)
   {
-      return maquinaRepository.findByHostname(hostname);
+      return maquinaRepository.findByHostnameContaining(hostname);
   } 
 	
 	/** 
