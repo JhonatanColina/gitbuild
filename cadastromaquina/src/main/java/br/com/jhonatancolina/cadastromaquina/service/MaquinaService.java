@@ -58,7 +58,7 @@ public class MaquinaService
 	 */
 	public List<Maquina> buscarPorHostname(String hostname)
   {
-      return maquinaRepository.findByHostnameContaining(hostname);
+      return maquinaRepository.findByHostnameContainingIgnoreCase(hostname);
   } 
 	
 	/** 

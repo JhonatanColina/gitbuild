@@ -13,7 +13,7 @@ public interface MaquinaRepository extends MongoRepository<Maquina, String>
 	Maquina findById(String id);
 	Maquina findByIp(String ip);
 	Maquina findByHostname(String hostname);
-	List<Maquina> findByHostnameContaining(String hostname);
+	List<Maquina> findByHostnameContainingIgnoreCase(String hostname);
 	Maquina findByMac(String mac);
 	List<Maquina> findBylocal(String local);
 }
