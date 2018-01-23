@@ -56,7 +56,7 @@ public class MaquinaService
 	 * @return Maquina
 	 * @param hostname hostname da maquina
 	 */
-	public Maquina buscarPorHostname(String hostname)
+	public List<Maquina> buscarPorHostname(String hostname)
   {
       return maquinaRepository.findByHostnameContaining(hostname);
   } 

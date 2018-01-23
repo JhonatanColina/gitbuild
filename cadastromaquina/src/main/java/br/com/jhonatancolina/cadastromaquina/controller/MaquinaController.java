@@ -46,7 +46,7 @@ public class MaquinaController
 	 * @return Classe maquina 
 	 */
 	@GetMapping("/hostname/{hostname}")
-	public Maquina buscaMaquinaHostname(@PathVariable(value = "hostname") String hostname)
+	public List<Maquina> buscaMaquinaHostname(@PathVariable(value = "hostname") String hostname)
 	{
 		return maquinaService.buscarPorHostname(hostname);
 	}
