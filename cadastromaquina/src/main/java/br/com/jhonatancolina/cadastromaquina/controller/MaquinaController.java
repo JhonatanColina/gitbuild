@@ -108,4 +108,13 @@ public class MaquinaController
 	{
 		maquinaService.apagar(id);
 	}
+	/** 
+	 * retorna quatidade de maquinas cadastradas.<br>
+	 * Ver mais em {@link MaquinaService#contagemMaquinas()}.
+	 */
+	@GetMapping("/count")
+	public void contagemMaquinas()
+	{
+		maquinaService.contagemMaquinas();
+	}
 }

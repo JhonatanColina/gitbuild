@@ -114,4 +114,12 @@ public class MaquinaService
 	{
 		maquinaRepository.deleteAll();
 	}
+	/** 
+	 * retorna quatidade de maquinas cadastradas<br>
+	 * Ver mais em {@link #contagemMaquinas()}.
+	 */
+	public long contagemMaquinas()
+	{
+		return maquinaRepository.count();
+	}
 }

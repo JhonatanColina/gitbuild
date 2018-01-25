@@ -16,4 +16,5 @@ public interface MaquinaRepository extends MongoRepository<Maquina, String>
 	List<Maquina> findByHostnameContainingIgnoreCase(String hostname);
 	Maquina findByMac(String mac);
 	List<Maquina> findBylocal(String local);
+	long count();
 }
