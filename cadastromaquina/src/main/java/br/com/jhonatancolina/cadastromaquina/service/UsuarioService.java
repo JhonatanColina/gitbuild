@@ -81,4 +81,12 @@ public class UsuarioService
 	{
 		return usuarioRepository.findByUsuarioAndSenha(usuario, senha);
 	}
+	/** 
+	 * retorna quatidade de usuarios cadastrados<br>
+	 * Ver mais em {@link #contagemMaquinas()}.
+	 */
+	public long contagemUsuario()
+	{
+		return usuarioRepository.count();
+	}
 }

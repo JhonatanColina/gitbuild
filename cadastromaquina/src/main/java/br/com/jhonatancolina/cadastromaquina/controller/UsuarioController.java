@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.jhonatancolina.cadastromaquina.model.Usuario;
+import br.com.jhonatancolina.cadastromaquina.service.MaquinaService;
 import br.com.jhonatancolina.cadastromaquina.service.UsuarioService;
 
 @RestController
@@ -90,5 +91,14 @@ public class UsuarioController
 	public void apagarUsuario(@PathVariable(value = "id") String id)
 	{
 		usuarioService.apagar(id);
+	}
+	/** 
+	 * retorna quatidade de usuarios cadastrados.<br>
+	 * Ver mais em {@link MaquinaService#vcontagemUsuario()}.
+	 */
+	@GetMapping("/count")
+	public long contagemUsuario()
+	{
+		return usuarioService.contagemUsuario();
 	}
 }

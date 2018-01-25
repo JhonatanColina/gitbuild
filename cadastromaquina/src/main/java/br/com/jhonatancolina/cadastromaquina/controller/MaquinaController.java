@@ -113,8 +113,8 @@ public class MaquinaController
 	 * Ver mais em {@link MaquinaService#contagemMaquinas()}.
 	 */
 	@GetMapping("/count")
-	public void contagemMaquinas()
+	public long contagemMaquinas()
 	{
-		maquinaService.contagemMaquinas();
+		return maquinaService.contagemMaquinas();
 	}
 }
